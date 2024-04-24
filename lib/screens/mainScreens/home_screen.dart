@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/bn_screen.dart';
 import 'package:shop_app/screen-keys.dart';
-import 'package:shop_app/screens/bn_screens/cart_bn_screen.dart';
+import 'package:shop_app/screens/appBarActions/cart_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/main_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/serach_bn_screen.dart';
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(bnScreensList[_changedPage].title),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
         actions:[
           IconButton(onPressed: (){
             Navigator.pushNamed(context, ScreenKeys.notificationsScreen);
@@ -50,18 +50,22 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             UserAccountsDrawerHeader(
               arrowColor: Colors.white,
-              currentAccountPictureSize: const Size(70, 70),
+              currentAccountPictureSize: const Size(100, 100),
               onDetailsPressed: () {
-                Navigator.pushReplacementNamed(context, ScreenKeys.searchBnScreen);
+
               },
               decoration: const BoxDecoration(
                 color: Colors.orange,
               ),
-              currentAccountPicture: CircleAvatar(
-                  radius: 30,
+              currentAccountPicture: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
                   child: Image.asset(
-                'images/account.png',
-              ),),
+                'images/dress_short2.jpg',
+                    fit: BoxFit.fill,
+              ),
+              ),
               accountName: const Text('Hicats Sam'),
               accountEmail: const Text('example@mail.com'),
             ),
@@ -104,15 +108,15 @@ class _HomeScreenState extends State<HomeScreen> {
               endIndent: 2,
               indent: 2,
             ),
-            ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text('Settings'),
-                trailing: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, ScreenKeys.settingsBnScreen);
-                  },
-                  icon: const Icon(Icons.arrow_forward_ios_outlined),
-                )),
+            // ListTile(
+            //     leading: const Icon(Icons.settings),
+            //     title: const Text('Settings'),
+            //     trailing: IconButton(
+            //       onPressed: () {
+            //         Navigator.pushNamed(context, ScreenKeys.settingsBnScreen);
+            //       },
+            //       icon: const Icon(Icons.arrow_forward_ios_outlined),
+            //     )),
             const Divider(
               height: 5,
               color: Colors.grey,

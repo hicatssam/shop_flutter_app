@@ -4,7 +4,8 @@ class OnBoardringContent extends StatelessWidget {
   final String title;
   final String subTitle;
 
-  const OnBoardringContent({required this.title, required this.subTitle});
+
+  const OnBoardringContent({super.key, required this.title, required this.subTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class OnBoardringContent extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 60,
+              backgroundColor: Colors.orangeAccent,
             ),
             const SizedBox(
               height: 10,
@@ -34,6 +36,7 @@ class OnBoardringContent extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
+
           ],
         ),
       ),

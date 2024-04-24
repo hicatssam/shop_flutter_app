@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/bn_screen.dart';
 import 'package:shop_app/screen-keys.dart';
-import 'package:shop_app/screens/bn_screens/cart_bn_screen.dart';
+import 'package:shop_app/screens/appBarActions/cart_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/main_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/serach_bn_screen.dart';
 import 'package:shop_app/screens/mainScreens/settings_bn_screen.dart';
 import 'package:shop_app/widget/app_list_tile.dart';
 
-class NotificationsScreen extends StatefulWidget {
-  const NotificationsScreen({super.key});
+class MessagesScreen extends StatefulWidget {
+  const MessagesScreen({super.key});
 
   @override
-  State<NotificationsScreen> createState() => _NotificationsScreenState();
+  State<MessagesScreen> createState() => _MessagesScreenState();
 }
 
-class _NotificationsScreenState extends State<NotificationsScreen> {
+class _MessagesScreenState extends State<MessagesScreen> {
   int _changedPage = 0;
 
   @override
@@ -26,15 +26,16 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, ScreenKeys.messagesScreen);
+                Navigator.pushNamed(context, ScreenKeys.notificationsScreen);
               },
               icon: const Icon(
-                Icons.messenger,
+                Icons.notifications_rounded,
                 size: 25,
               )),
           IconButton(
               onPressed: () {
                 Navigator.pushNamed(context, ScreenKeys.cartBnScreen);
+
               },
               icon: const Icon(
                 Icons.shopping_cart,
@@ -58,6 +59,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             period: 'Am',
             time: '9:40',
             color: Colors.orange,
+            source: 'ms',
+            image: 'images/dress3.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -67,6 +70,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             period: 'Pm',
             time: '12:30',
             color: Colors.cyan,
+            source: 'ms',
+            image: 'images/dress3.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -76,6 +81,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             period: 'Pm',
             time: '10:05',
             color: Colors.yellow,
+            source: 'ms',
+            image: 'images/dress3.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -85,6 +92,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             period: 'Am',
             time: '9:20',
             color: Colors.pinkAccent,
+            source: 'ms',
+            image: 'images/dress3.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -94,6 +103,41 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             period: 'Am',
             time: '9:30',
             color: Colors.red,
+            source: 'ms',
+            image: 'images/account_user.jpg',
+          ),
+          Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
+          AppListTile(
+            subTitle: 'BOGO Sale starting tomorrow. Don’t forget to check it out for great deals!',
+            orderNum: '1585625',
+            iconData: Icons.reorder,
+            period: 'Am',
+            time: '9:30',
+            color: Colors.red,
+            source: 'ms',
+            image: 'images/account_user.jpg',
+          ),
+          Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
+          AppListTile(
+            subTitle: 'BOGO Sale starting tomorrow. Don’t forget to check it out for great deals!',
+            orderNum: '1585625',
+            iconData: Icons.reorder,
+            period: 'Am',
+            time: '9:30',
+            color: Colors.red,
+            source: 'ms',
+            image: 'images/account_user.jpg',
+          ),
+          Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
+          AppListTile(
+            subTitle: 'BOGO Sale starting tomorrow. Don’t forget to check it out for great deals!',
+            orderNum: '1585625',
+            iconData: Icons.reorder,
+            period: 'Am',
+            time: '9:30',
+            color: Colors.red,
+            source: 'ms',
+            image: 'images/account_user.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
         ],

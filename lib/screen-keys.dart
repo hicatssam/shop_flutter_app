@@ -17,6 +17,9 @@ class ScreenKeys {
   static const String productDetailsScreen = '/ProductDetailsScreen';
   static const String faqsScreen = '/FaqsScreen';
   static const String infoScreen = '/InfoScreen';
-  static const String outBoardringScreen = '/OutBoardringScreen';
+  static const String onBoardringScreen = '/OutBoardringScreen';
+  static const String notificationsSettingsScreen = '/NotificationsSettingsScreen';
+  static const String addressScreen = '/AddressScreen';
+  static const String addAddressScreen = '/AddAddressScreen';
 
 }

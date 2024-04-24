@@ -144,12 +144,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void preformRegister() {
-    if (checkError()) {
+    if (checkData()) {
       register();
     }
   }
 
-  bool checkError() {
+
+  bool checkData() {
     if (_textFullNameEditingController.text.isNotEmpty &
         _textBirthDayEditingController.text.isNotEmpty&
       _textEmailEditingController.text.isNotEmpty&
