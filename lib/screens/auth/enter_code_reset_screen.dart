@@ -59,7 +59,7 @@ class _EnterCodeResetScreenState extends State<EnterCodeResetScreen> {
               const SizedBox(
                 height: 30,
               ),
-              AppTextFiled('Code ', 'Enter Code', Icons.code, Icons.clear, _textCodeEditingController),
+              AppTextFiled('Code ', 'Enter Code', Icons.code, Icons.clear, _textCodeEditingController,false),
               const SizedBox(
                 height: 20,
               ),

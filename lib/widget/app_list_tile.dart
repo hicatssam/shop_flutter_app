@@ -35,9 +35,13 @@ class _AppListTileState extends State<AppListTile> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-        backgroundColor: widget.color,
-        radius: 50,
+      leading: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(image: AssetImage(widget.image.toString())),
+        ),
         child: widget.source == 'ms'
             ? Image.asset('${widget.image}',fit: BoxFit.fill,width: 40,height: 40,)
             : Icon(widget.iconData,color: widget.iconColor,),

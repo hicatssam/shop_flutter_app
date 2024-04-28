@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/models/bn_screen.dart';
 import 'package:shop_app/screen-keys.dart';
-import 'package:shop_app/screens/appBarActions/cart_bn_screen.dart';
-import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
-import 'package:shop_app/screens/bn_screens/main_bn_screen.dart';
-import 'package:shop_app/screens/bn_screens/serach_bn_screen.dart';
-import 'package:shop_app/screens/mainScreens/settings_bn_screen.dart';
 import 'package:shop_app/widget/app_list_tile.dart';
 
 class NotificationsScreen extends StatefulWidget {
@@ -22,7 +16,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
         actions: [
           IconButton(
               onPressed: () {

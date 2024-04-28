@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/screen-keys.dart';
-import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
+
 import 'package:shop_app/widget/cart_list_tile_card.dart';
 
 class CartBnScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _CartBnScreenState extends State<CartBnScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
         actions: [
           IconButton(
               onPressed: () {

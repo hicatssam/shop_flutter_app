@@ -6,11 +6,12 @@ class AppTextFiled extends StatelessWidget {
   final String hintText;
   final IconData? prefixIcon;
   final IconData? suffixIcon;
+  final bool obscureText;
   final TextEditingController textEditingController;
 
 
   const AppTextFiled(this.label, this.hintText, this.prefixIcon, this.suffixIcon,
-      this.textEditingController, {super.key});
+      this.textEditingController, this.obscureText, {super.key});
 
 
 
@@ -18,7 +19,7 @@ class AppTextFiled extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: textEditingController,
-      obscureText: true,
+      obscureText: obscureText,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

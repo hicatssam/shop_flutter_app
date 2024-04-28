@@ -41,6 +41,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepOrange,
+        title: const Text('REGISTER'),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
@@ -70,23 +75,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(
                   height: 15,
                 ),
-                AppTextFiled('Full Name', 'Enter Full name', Icons.person, Icons.clear, _textFullNameEditingController),
+                AppTextFiled('Full Name', 'Enter Full name', Icons.person, Icons.clear, _textFullNameEditingController,false),
                 const SizedBox(
                   height: 15,
                 ),
-                AppTextFiled('Birth Day', 'Enter Birth Day', Icons.calendar_month_outlined, Icons.calendar_month, _textBirthDayEditingController),
+                AppTextFiled('Birth Day', 'Enter Birth Day', Icons.calendar_month_outlined, Icons.calendar_month, _textBirthDayEditingController,false),
                 const SizedBox(
                   height: 15,
                 ),
-                AppTextFiled('Country', 'Enter country', null,null, _textCountryEditingController),
+                AppTextFiled('Country', 'Enter country', null,null, _textCountryEditingController,false),
                 const SizedBox(
                   height: 15,
                 ),
-                AppTextFiled('Email', 'Enter Email Address', Icons.email, Icons.clear, _textEmailEditingController),
+                AppTextFiled('Email', 'Enter Email Address', Icons.email, Icons.clear, _textEmailEditingController,false),
                 const SizedBox(
                   height: 15,
                 ),
-                AppTextFiled('Password', 'Enter Password', Icons.lock, Icons.remove_red_eye, _textPasswordEditingController),
+                AppTextFiled('Password', 'Enter Password', Icons.lock, Icons.remove_red_eye, _textPasswordEditingController,true),
                 // AppTextFiled('Reset Password', 'Enter Password', Icons.lock, Icons.remove_red_eye, _textPasswordEditingController),
 
                 const SizedBox(
@@ -95,7 +100,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 15,
-                    backgroundColor: Colors.orange,
+                    backgroundColor: Colors.deepOrange,
                     alignment: Alignment.center,
                     minimumSize: const Size(double.infinity, 45),
                     shape: RoundedRectangleBorder(
@@ -105,7 +110,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   onPressed: () {
                     preformRegister();
                   },
-                  child: const Text('Sign Up'),
+                  child: const Text('Sign Up',style: TextStyle(color: Colors.white),),
                 ),
                 const SizedBox(
                   height: 15,
@@ -123,14 +128,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     TextButton(
                         onPressed: () {
-                          Navigator.pushReplacementNamed(context, ScreenKeys.loginScreen);
+                          Navigator.pushNamed(context, ScreenKeys.loginScreen);
                         },
                         child: const Text(
                           'Sign In',
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
-                            color: Colors.orange,
+                            color: Colors.deepOrange,
                           ),
                         )),
                   ],

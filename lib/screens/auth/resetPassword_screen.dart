@@ -76,6 +76,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 Icons.email,
                 Icons.send,
                 _textEmailEditingController,
+                false
               ),
             ],
           ),

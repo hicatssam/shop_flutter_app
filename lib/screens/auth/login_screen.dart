@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/prefs/SharedPrefsContoller.dart';
 import 'package:shop_app/screen-keys.dart';
 import 'package:shop_app/widget/app_textFiled.dart';
 
@@ -41,9 +42,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
-        body: SafeArea(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepOrange,
+        title: Text('LOGIN'),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 50),
             child: Column(
@@ -70,12 +76,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 30,
                 ),
                 AppTextFiled('Email ', 'Enter Email', Icons.email, Icons.clear,
-                    _textEmailEditingController),
+                    _textEmailEditingController,false),
                 const SizedBox(
                   height: 20,
                 ),
                 AppTextFiled('Password', 'Enter Password', Icons.lock,
-                    Icons.remove_red_eye, _textPasswordEditingController),
+                    Icons.remove_red_eye, _textPasswordEditingController,true),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -100,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
-                            color: Colors.orangeAccent,
+                            color: Colors.deepOrange,
                           ),
                           textAlign: TextAlign.start,
                         )),
@@ -112,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 15,
-                    backgroundColor: Colors.orange,
+                    backgroundColor: Colors.deepOrange,
                     alignment: Alignment.center,
                     minimumSize: const Size(double.infinity, 45),
                     shape: RoundedRectangleBorder(
@@ -120,6 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   onPressed: () {
+                    print('password ${SharedPrefsController().password}');
+                    print('password ${SharedPrefsController().email}');
                     preformLogin();
                   },
                   child: const Text('Login'),
@@ -147,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
-                            color: Colors.orange,
+                            color: Colors.deepOrange,
                           ),
                         )),
                   ],
@@ -163,9 +171,8 @@ class _LoginScreenState extends State<LoginScreen> {
   void preformLogin() {
     if (checkError()) {
       login();
-      showMessage(message: 'Logged Successful...', color: Colors.green);
     } else {
-      showMessage(message: 'Enter Required Data!', color: Colors.orange);
+      showMessage(message: 'Enter Required Data!', color: Colors.deepOrange);
     }
   }
 
@@ -178,8 +185,15 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  void login() {
-    Navigator.pushReplacementNamed(context, ScreenKeys.homeScreen);
+  Future<void> login() async {
+    if(validationInputs()){
+      await SharedPrefsController().save(email: _textEmailEditingController.text, password: _textPasswordEditingController.text);
+      Future.delayed(const Duration(seconds: 1),(){
+        Navigator.pushNamed(context, ScreenKeys.homeScreen);
+        showMessage(message: 'Logged Successful...', color: Colors.green);
+      });
+    }
+
   }
 
   void showMessage({required String message, required Color color}) {
@@ -192,5 +206,11 @@ class _LoginScreenState extends State<LoginScreen> {
       closeIconColor: Colors.white,
       behavior: SnackBarBehavior.floating,
     ));
+  }
+
+
+  bool validationInputs(){
+   return  _textEmailEditingController.text == SharedPrefsController().email &&
+       _textPasswordEditingController.text == SharedPrefsController().password ? true : false;
   }
 }

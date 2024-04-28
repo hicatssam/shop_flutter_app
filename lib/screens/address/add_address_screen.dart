@@ -13,11 +13,11 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
   int? _SelectedItem;
   bool _isSelected = false;
   List<Address> addresses = <Address>[
-    Address(id: 1, name: 'Palestine'),
-    Address(id: 2, name: 'American'),
-    Address(id: 3, name: 'Canada'),
-    Address(id: 4, name: 'Egypt'),
-    Address(id: 5, name: 'Turkia'),
+    Address(addressId: 1, name: 'Palestine'),
+    Address(addressId: 2, name: 'American'),
+    Address(addressId: 3, name: 'Canada'),
+    Address(addressId: 4, name: 'Egypt'),
+    Address(addressId: 5, name: 'Turkia'),
   ];
   List<Tag> tags = <Tag>[
     Tag(id: 1, name: 'Business'),
@@ -94,7 +94,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                     onTap: () {},
                     items: addresses
                         .map((e) => DropdownMenuItem(
-                              value: e.id,
+                              value: e.addressId,
                               child: Text(e.name),
                             ))
                         .toList(),

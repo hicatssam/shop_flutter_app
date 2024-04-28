@@ -49,7 +49,7 @@ class _OnBoardringScerenState extends State<OnBoardringSceren> {
 
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange,
+                    backgroundColor: Colors.deepOrange,
                     shape: const CircleBorder(
                       side: BorderSide(
                         width: 0,
@@ -68,12 +68,12 @@ class _OnBoardringScerenState extends State<OnBoardringSceren> {
                   onPressed: () {
                     Future.delayed(
                         const Duration(seconds: 1),(){
-                      _pageController.nextPage(duration: const Duration(milliseconds: 700), curve: Curves.easeIn);
+                      _pageController.animateToPage(2, duration: const Duration(seconds: 2), curve: Curves.bounceOut);
                     });
 
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange,
+                    backgroundColor: Colors.deepOrange,
                     shape: const CircleBorder(
                       side: BorderSide(
                         width: 0,
@@ -143,13 +143,12 @@ class _OnBoardringScerenState extends State<OnBoardringSceren> {
                 maintainSemantics: true,
                 child: ElevatedButton(onPressed: (){
                   Future.delayed(const Duration(seconds: 1),(){
-                    Navigator.pushReplacementNamed(
-                        context, ScreenKeys.loginScreen);
+                    Navigator.pushNamed(context, ScreenKeys.loginScreen);
                   });
 
                 },style: ElevatedButton.styleFrom(
                     minimumSize: const Size(160, 50),
-                    backgroundColor: Colors.orange
+                    backgroundColor: Colors.deepOrange
                 ), child: const Text('Start'),),
               ),
 
@@ -177,7 +176,7 @@ class _OnBoardringScerenState extends State<OnBoardringSceren> {
               height: 10,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: _currentPage==0 ?Colors.orange : Colors.grey
+                color: _currentPage==0 ?Colors.deepOrange : Colors.grey
               ),
             ),
               const SizedBox(width: 5,),
@@ -186,7 +185,7 @@ class _OnBoardringScerenState extends State<OnBoardringSceren> {
                 height: 10,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color:  _currentPage==1 ?Colors.orange : Colors.grey
+                    color:  _currentPage==1 ?Colors.deepOrange : Colors.grey
                 ),
               ),
               const SizedBox(width: 5,),

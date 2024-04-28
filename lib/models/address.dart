@@ -1,6 +1,6 @@
 class Address{
-  final int id;
-  final String name;
+  final int? addressId;
+  final String? name;
 
-  Address({required this.id, required this.name});
+  Address({required this.addressId, required this.name});
 }

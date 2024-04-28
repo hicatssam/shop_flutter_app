@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/bn_screen.dart';
+import 'package:shop_app/prefs/SharedPrefsContoller.dart';
 import 'package:shop_app/screen-keys.dart';
-import 'package:shop_app/screens/appBarActions/cart_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/main_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/serach_bn_screen.dart';
@@ -55,19 +55,28 @@ class _HomeScreenState extends State<HomeScreen> {
 
               },
               decoration: const BoxDecoration(
-                color: Colors.orange,
+                color: Colors.deepOrange,
               ),
               currentAccountPicture: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  child: Image.asset(
-                'images/dress_short2.jpg',
-                    fit: BoxFit.fill,
+                  child: Container(
+                    foregroundDecoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    width: 100,
+                    height: 100,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      image: const DecorationImage(image: AssetImage('Images'))
+                    ),
+                  )
               ),
-              ),
-              accountName: const Text('Hicats Sam'),
-              accountEmail: const Text('example@mail.com'),
+              accountName: const Text('images/account_user.jpg'),
+              accountEmail:  Text(SharedPrefsController().email),
             ),
             ListTile(
                 leading: const Icon(Icons.reorder),
@@ -185,6 +194,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 trailing: IconButton(
                   onPressed: () {
                     Future.delayed(const Duration(seconds: 1),(){
+                      SharedPrefsController().removeKey(key: PrefKeys.loggedIn.toString());
+                      SharedPrefsController().logOut();
                       Navigator.pushNamed(context, ScreenKeys.loginScreen);
                     });
 
@@ -209,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedLabelStyle: const TextStyle(
           color: Colors.black
         ),
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(
@@ -218,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: 'Home',
               activeIcon: Icon(
                 Icons.home,
-                color: Colors.orange,
+                color: Colors.white,
               )),
           BottomNavigationBarItem(
               icon: Icon(
@@ -227,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: 'Search',
               activeIcon: Icon(
                 Icons.search_sharp,
-                color: Colors.orange,
+                color: Colors.white,
               )),
           BottomNavigationBarItem(
               icon: Icon(
@@ -236,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: 'Favorite',
               activeIcon: Icon(
                 Icons.favorite,
-                color: Colors.orange,
+                color: Colors.white,
               )),
           BottomNavigationBarItem(
               icon: Icon(
@@ -245,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: 'Settings',
               activeIcon: Icon(
               Icons.settings,
-              color: Colors.orange,
+              color: Colors.white,
               )),
         ],
       ),
