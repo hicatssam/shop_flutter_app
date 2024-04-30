@@ -13,11 +13,12 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
   int? _SelectedItem;
   bool _isSelected = false;
   List<Address> addresses = <Address>[
-    Address(addressId: 1, name: 'Palestine'),
-    Address(addressId: 2, name: 'American'),
-    Address(addressId: 3, name: 'Canada'),
-    Address(addressId: 4, name: 'Egypt'),
-    Address(addressId: 5, name: 'Turkia'),
+    Address(addressId: 1, country: 'Palestine',address: 'Alrashid Street',city: 'Gaza',postalCode: '9990300',state: 'Gaza City'),
+    Address(addressId: 2, country: 'American',address: 'Alrashid Street',city: 'Gaza',postalCode: '9990300',state: 'Gaza City'),
+    Address(addressId: 3, country: 'Egypt',address: 'Alrashid Street',city: 'Gaza',postalCode: '9990300',state: 'Gaza City'),
+    Address(addressId: 4, country: 'Egypt',address: 'Alrashid Street',city: 'Gaza',postalCode: '9990300',state: 'Gaza City'),
+    Address(addressId: 4, country: 'Egypt',address: 'Alrashid Street',city: 'Gaza',postalCode: '9990300',state: 'Gaza City'),
+
   ];
   List<Tag> tags = <Tag>[
     Tag(id: 1, name: 'Business'),
@@ -29,7 +30,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+
         title: const Text('Add a new address'),
         leading: IconButton(
             onPressed: () {
@@ -95,7 +96,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                     items: addresses
                         .map((e) => DropdownMenuItem(
                               value: e.addressId,
-                              child: Text(e.name),
+                              child: Text(e.country!),
                             ))
                         .toList(),
                     hint: const Text('Select'),

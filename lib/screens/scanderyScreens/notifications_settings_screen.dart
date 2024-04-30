@@ -12,7 +12,7 @@ class _NotificationsSettingsScreenState extends State<NotificationsSettingsScree
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
       ),
       body: ListView(
           children: [

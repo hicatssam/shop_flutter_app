@@ -1,6 +1,6 @@
 import 'package:shop_app/models/address.dart';
 
-class User extends Address {
+class User {
   final int userId;
   final String firstName;
   final String lastName;
@@ -10,6 +10,5 @@ class User extends Address {
   final int mobile;
 
   User(this.userId, this.firstName, this.lastName, this.email, this.password,
-      this.rememberMe, this.mobile,
-      {required super.addressId, required super.name});
+      this.rememberMe, this.mobile,);
 }

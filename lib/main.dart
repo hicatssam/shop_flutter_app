@@ -16,10 +16,10 @@ import 'package:shop_app/screens/mainScreens/home_screen.dart';
 import 'package:shop_app/screens/auth/login_screen.dart';
 import 'package:shop_app/screens/appBarActions/messages_screen.dart';
 import 'package:shop_app/screens/appBarActions/notifications_screen.dart';
-import 'package:shop_app/screens/mainScreens/product_details_screen.dart';
+import 'package:shop_app/screens/scanderyScreens/product_details_screen.dart';
 import 'package:shop_app/screens/auth/register_screen.dart';
 import 'package:shop_app/screens/auth/forgetPassword_screen.dart';
-import 'package:shop_app/screens/mainScreens/settings_bn_screen.dart';
+import 'package:shop_app/screens/bn_screens/settings_bn_screen.dart';
 import 'package:shop_app/screens/scanderyScreens/notifications_settings_screen.dart';
 import 'package:shop_app/screens/onBoardringScreens/onBoardringScreen.dart';
 import 'package:shop_app/screens/auth/resetPassword_screen.dart';
@@ -55,8 +55,15 @@ class MyApp extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.deepOrange
           ),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.deepOrange
         )
       ),
+
+      localizationsDelegates: [
+
+      ],
 
       routes:{
         ScreenKeys.lauchScreen : (context) => const LaunchScreen(),

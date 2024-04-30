@@ -33,43 +33,167 @@ class _AddressScreenState extends State<AddressScreen> {
           physics: const AlwaysScrollableScrollPhysics(),
           children: [
             Card(
-              elevation: 10,
-              shadowColor: Colors.cyan,
+             shape: RoundedRectangleBorder(
+               borderRadius: BorderRadius.circular(20),
+             ), 
+              shadowColor: Colors.grey,
               margin: const EdgeInsets.all(10),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                onPressed: () {},
-                child: ListTile(
-                  style: ListTileStyle.drawer,
-                  leading: const Icon(Icons.edit_location_alt_outlined),
-                  title: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Louay Wesam Miqadd',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
+              child: ListTile(
+                onTap: (){
+                  //TODO: passing for a showing address screen
+                },
+                style: ListTileStyle.drawer,
+                leading: const Icon(Icons.edit_location_alt_outlined),
+                title: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Hickats Sam Miqadd',
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                        'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 30),
+                        backgroundColor: Colors.black54,
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                          'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          minimumSize: const Size(30, 30),
-                          backgroundColor: Colors.cyan,
-                        ),
-                        child: const Text('Business'),
-                      ),
-                    ],
-                  ),
-                  trailing: const Text('+972569896990',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                      child: const Text('Business'),
+                    ),
+                  ],
                 ),
+                trailing: const Text('+972569896990',
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              shadowColor: Colors.grey,
+              margin: const EdgeInsets.all(10),
+              child: ListTile(
+                onTap: (){
+                  //TODO: passing for a showing address screen
+                },
+                style: ListTileStyle.drawer,
+                leading: const Icon(Icons.edit_location_alt_outlined),
+                title: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Hickats Sam Miqadd',
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                        'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 30),
+                        backgroundColor: Colors.black54,
+                      ),
+                      child: const Text('Business'),
+                    ),
+                  ],
+                ),
+                trailing: const Text('+972569896990',
+                    style:
+                    TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              shadowColor: Colors.grey,
+              margin: const EdgeInsets.all(10),
+              child: ListTile(
+                onTap: (){
+                  //TODO: passing for a showing address screen
+                },
+                style: ListTileStyle.drawer,
+                leading: const Icon(Icons.edit_location_alt_outlined),
+                title: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Hickats Sam Miqadd',
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                        'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 30),
+                        backgroundColor: Colors.black54,
+                      ),
+                      child: const Text('Business'),
+                    ),
+                  ],
+                ),
+                trailing: const Text('+972569896990',
+                    style:
+                    TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              shadowColor: Colors.grey,
+              margin: const EdgeInsets.all(10),
+              child: ListTile(
+                onTap: (){
+                  //TODO: passing for a showing address screen
+                },
+                style: ListTileStyle.drawer,
+                leading: const Icon(Icons.edit_location_alt_outlined),
+                title: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Hickats Sam Miqadd',
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                        'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 30),
+                        backgroundColor: Colors.black54,
+                      ),
+                      child: const Text('Business'),
+                    ),
+                  ],
+                ),
+                trailing: const Text('+972569896990',
+                    style:
+                    TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               ),
             ),
           ]),

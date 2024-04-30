@@ -5,7 +5,7 @@ import 'package:shop_app/screen-keys.dart';
 import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/main_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/serach_bn_screen.dart';
-import 'package:shop_app/screens/mainScreens/settings_bn_screen.dart';
+import 'package:shop_app/screens/bn_screens/settings_bn_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
