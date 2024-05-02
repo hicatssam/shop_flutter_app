@@ -54,7 +54,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             time: '9:40',
             color: Colors.orange,
             source: 'ms',
-            image: 'images/dress3.jpg',
+            image: 'images/men1.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -65,7 +65,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             time: '12:30',
             color: Colors.cyan,
             source: 'ms',
-            image: 'images/dress3.jpg',
+            image: 'images/fashion_2.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -76,7 +76,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             time: '10:05',
             color: Colors.yellow,
             source: 'ms',
-            image: 'images/dress3.jpg',
+            image: 'images/fashion_3.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -87,7 +87,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             time: '9:20',
             color: Colors.pinkAccent,
             source: 'ms',
-            image: 'images/dress3.jpg',
+            image: 'images/fashion_4.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(
@@ -98,7 +98,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             time: '9:30',
             color: Colors.red,
             source: 'ms',
-            image: 'images/account_user.jpg',
+            image: 'images/fashion_5.jpg',
           ),
           Divider(height: 30, indent: 10, endIndent: 10, thickness: 1),
           AppListTile(

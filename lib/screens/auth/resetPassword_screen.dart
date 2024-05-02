@@ -70,14 +70,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               const SizedBox(
                 height: 30,
               ),
-              AppTextFiled(
-                'Email',
-                'Type Your Email',
-                Icons.email,
-                Icons.send,
-                _textEmailEditingController,
-                false
-              ),
+
+              AppTextFiled(label: 'Email', hintText: 'Type Your Email', prefixIcon: Icons.email, textEditingController: _textEmailEditingController, keyboardType: TextInputType.emailAddress, obscureText: false)
             ],
           ),
         ),

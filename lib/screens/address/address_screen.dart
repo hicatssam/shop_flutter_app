@@ -16,7 +16,6 @@ class _AddressScreenState extends State<AddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         backgroundColor: Colors.deepOrange,
         leading: IconButton(
@@ -25,7 +24,7 @@ class _AddressScreenState extends State<AddressScreen> {
           },
           icon: const Icon(Icons.arrow_back_ios),
         ),
-        title: Text('Shipping address'),
+        title: const Text('Shipping address'),
       ),
       body: ListView(
           scrollDirection: Axis.vertical,
@@ -33,13 +32,13 @@ class _AddressScreenState extends State<AddressScreen> {
           physics: const AlwaysScrollableScrollPhysics(),
           children: [
             Card(
-             shape: RoundedRectangleBorder(
-               borderRadius: BorderRadius.circular(20),
-             ), 
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
               shadowColor: Colors.grey,
               margin: const EdgeInsets.all(10),
               child: ListTile(
-                onTap: (){
+                onTap: () {
                   //TODO: passing for a showing address screen
                 },
                 style: ListTileStyle.drawer,
@@ -49,9 +48,9 @@ class _AddressScreenState extends State<AddressScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Hickats Sam Miqadd',
-                      style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.w500),
+                      'Hickats Sam ',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
                       height: 5,
@@ -62,15 +61,24 @@ class _AddressScreenState extends State<AddressScreen> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(30, 30),
-                        backgroundColor: Colors.black54,
+                        backgroundColor: Colors.grey,
                       ),
                       child: const Text('Business'),
                     ),
                   ],
                 ),
-                trailing: const Text('+972569896990',
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                trailing: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+
+                  children: [
+
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, ScreenKeys.updateAddressScreen);
+                        },
+                        child: const Text('Update')),
+                  ],
+                ),
               ),
             ),
             Card(
@@ -80,7 +88,7 @@ class _AddressScreenState extends State<AddressScreen> {
               shadowColor: Colors.grey,
               margin: const EdgeInsets.all(10),
               child: ListTile(
-                onTap: (){
+                onTap: () {
                   //TODO: passing for a showing address screen
                 },
                 style: ListTileStyle.drawer,
@@ -91,8 +99,8 @@ class _AddressScreenState extends State<AddressScreen> {
                   children: [
                     const Text(
                       'Hickats Sam Miqadd',
-                      style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
                       height: 5,
@@ -103,15 +111,24 @@ class _AddressScreenState extends State<AddressScreen> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(30, 30),
-                        backgroundColor: Colors.black54,
+                        backgroundColor: Colors.grey,
                       ),
                       child: const Text('Business'),
                     ),
                   ],
                 ),
-                trailing: const Text('+972569896990',
-                    style:
-                    TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                trailing:  Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+
+                  children: [
+
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, ScreenKeys.updateAddressScreen);
+                        },
+                        child: const Text('Update')),
+                  ],
+                ),
               ),
             ),
             Card(
@@ -121,7 +138,7 @@ class _AddressScreenState extends State<AddressScreen> {
               shadowColor: Colors.grey,
               margin: const EdgeInsets.all(10),
               child: ListTile(
-                onTap: (){
+                onTap: () {
                   //TODO: passing for a showing address screen
                 },
                 style: ListTileStyle.drawer,
@@ -132,8 +149,8 @@ class _AddressScreenState extends State<AddressScreen> {
                   children: [
                     const Text(
                       'Hickats Sam Miqadd',
-                      style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
                       height: 5,
@@ -144,15 +161,24 @@ class _AddressScreenState extends State<AddressScreen> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(30, 30),
-                        backgroundColor: Colors.black54,
+                        backgroundColor: Colors.grey,
                       ),
                       child: const Text('Business'),
                     ),
                   ],
                 ),
-                trailing: const Text('+972569896990',
-                    style:
-                    TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+
+                    children: [
+
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, ScreenKeys.updateAddressScreen);
+                          },
+                          child: const Text('Update')),
+                    ],
+                  ),
               ),
             ),
             Card(
@@ -162,38 +188,47 @@ class _AddressScreenState extends State<AddressScreen> {
               shadowColor: Colors.grey,
               margin: const EdgeInsets.all(10),
               child: ListTile(
-                onTap: (){
-                  //TODO: passing for a showing address screen
-                },
-                style: ListTileStyle.drawer,
-                leading: const Icon(Icons.edit_location_alt_outlined),
-                title: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Hickats Sam Miqadd',
-                      style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.w500),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Text(
-                        'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: const Size(30, 30),
-                        backgroundColor: Colors.black54,
+                  onTap: () {
+                    //TODO: passing for a showing address screen
+                  },
+                  style: ListTileStyle.drawer,
+                  leading: const Icon(Icons.edit_location_alt_outlined),
+                  title: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Hickats Sam Miqadd',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       ),
-                      child: const Text('Business'),
-                    ),
-                  ],
-                ),
-                trailing: const Text('+972569896990',
-                    style:
-                    TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                          'Beach Camp ,Gaza Strip, Gaza, Gaza, State of palestine, 9990300'),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: const Size(30, 30),
+                          backgroundColor: Colors.grey,
+                        ),
+                        child: const Text('Business'),
+                      ),
+                    ],
+                  ),
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+
+                    children: [
+
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, ScreenKeys.updateAddressScreen);
+                          },
+                          child: const Text('Update')),
+                    ],
+                  ),
               ),
             ),
           ]),
@@ -201,18 +236,16 @@ class _AddressScreenState extends State<AddressScreen> {
         padding: const EdgeInsets.all(8.0),
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context,ScreenKeys.addAddressScreen);
+            Navigator.pushNamed(context, ScreenKeys.addAddressScreen);
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepOrange,
-            elevation: 10,
-           minimumSize: const Size(double.infinity, 45),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            )
-          ),
+              backgroundColor: Colors.deepOrange,
+              elevation: 10,
+              minimumSize: const Size(double.infinity, 45),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              )),
           child: const Text('Add address'),
-
         ),
       ),
     );

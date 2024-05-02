@@ -58,7 +58,6 @@ class _FaqsScreenState extends State<FaqsScreen>
           ],
           controller: _tabController,
         ),
-        backgroundColor: Colors.orange,
 
       ),
       body:  TabBarView(

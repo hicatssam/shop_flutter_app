@@ -75,13 +75,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 30,
                 ),
-                AppTextFiled('Email ', 'Enter Email', Icons.email, Icons.clear,
-                    _textEmailEditingController,false),
+                AppTextFiled(label: 'Email ', hintText: 'Enter Email',prefixIcon:  Icons.email, suffixIcon: Icons.clear,
+                    textEditingController: _textEmailEditingController,keyboardType: TextInputType.emailAddress,obscureText: false),
                 const SizedBox(
                   height: 20,
                 ),
-                AppTextFiled('Password', 'Enter Password', Icons.lock,
-                    Icons.remove_red_eye, _textPasswordEditingController,true),
+                AppTextFiled(label: 'Password',  hintText: 'Enter Password',prefixIcon: Icons.lock,
+                    suffixIcon: Icons.remove_red_eye, textEditingController: _textPasswordEditingController,obscureText: true, keyboardType: TextInputType.text,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

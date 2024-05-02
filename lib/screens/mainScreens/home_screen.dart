@@ -97,7 +97,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 trailing: IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.arrow_forward_ios_outlined),
-                )),
+                ),
+            onTap: (){
+
+            },),
             const Divider(
               height: 5,
               color: Colors.grey,
@@ -162,10 +165,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: const Text('Info'),
                 trailing: IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, ScreenKeys.infoScreen);
                   },
                   icon: const Icon(Icons.arrow_forward_ios_outlined),
-                )),
+                ),onTap: (){
+              Navigator.pushNamed(context, ScreenKeys.infoScreen);
+
+            }),
             const Divider(
               height: 5,
               color: Colors.grey,
@@ -177,10 +182,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: const Text('Faqs'),
                 trailing: IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, ScreenKeys.faqsScreen);
+
                   },
                   icon: const Icon(Icons.arrow_forward_ios_outlined),
-                )),
+                ),onTap: (){
+              Navigator.pushNamed(context, ScreenKeys.faqsScreen);
+            },),
             const Divider(
               height: 5,
               color: Colors.grey,
@@ -193,15 +200,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: const Text('Log Out'),
                 trailing: IconButton(
                   onPressed: () {
-                    Future.delayed(const Duration(seconds: 1),(){
-                      SharedPrefsController().removeKey(key: PrefKeys.loggedIn.toString());
-                      SharedPrefsController().logOut();
-                      Navigator.pushNamed(context, ScreenKeys.loginScreen);
-                    });
+                    // Future.delayed(const Duration(seconds: 1),(){
+                    //   SharedPrefsController().removeKey(key: PrefKeys.loggedIn.toString());
+                    //   SharedPrefsController().logOut();
+                    //   Navigator.pushNamed(context, ScreenKeys.loginScreen);
+                    // });
 
                   },
                   icon: const Icon(Icons.arrow_forward_ios_outlined),
-                )),
+                ),
+            onTap: (){
+              Future.delayed(const Duration(seconds: 1),(){
+                SharedPrefsController().removeKey(key: PrefKeys.loggedIn.toString());
+                SharedPrefsController().logOut();
+                Navigator.pushReplacementNamed(context, ScreenKeys.loginScreen);
+              });
+            },),
           ],
         ),
       ),

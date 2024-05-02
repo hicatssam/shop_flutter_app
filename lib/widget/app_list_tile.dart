@@ -36,15 +36,12 @@ class _AppListTileState extends State<AppListTile> {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-        width: 60,
-        height: 60,
+        width: 50,
+        height: 50,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          image: DecorationImage(image: AssetImage(widget.image.toString())),
+          image: DecorationImage(image: AssetImage(widget.image.toString()),fit: BoxFit.fill),
         ),
-        child: widget.source == 'ms'
-            ? Image.asset('${widget.image}',fit: BoxFit.fill,width: 40,height: 40,)
-            : Icon(widget.iconData,color: widget.iconColor,),
       ),
       title: Text('${widget.subTitle}${widget.orderNum} as shipped.'),
       trailing: Column(

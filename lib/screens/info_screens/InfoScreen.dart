@@ -26,19 +26,19 @@ class _InfoScreenState extends State<InfoScreen> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        title: const Text('Info screen'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            const CircleAvatar(radius: 50,backgroundColor: Colors.orange),
+            const CircleAvatar(radius: 50,backgroundColor: Colors.red),
             TabBar(
               onTap: (int index){
 
               },
                 controller: _tabController,
-                labelColor: Colors.orange,
+                labelColor: Colors.black,
                 tabs: const [
               Tab(
                 child: Text('About App'),
@@ -51,8 +51,8 @@ class _InfoScreenState extends State<InfoScreen> with SingleTickerProviderStateM
               child: TabBarView(
                   controller: _tabController,
                   children: [
-                    Text('dsfsdfsdf'),
-                    Text('data')
+                    const Text('dsfsdfsdf'),
+                    const Text('data')
                   ]),
             ),
           ],

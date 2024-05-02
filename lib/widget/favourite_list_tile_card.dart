@@ -28,10 +28,15 @@ class FavouriteListTileCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 60,
-                child: Image.asset(image,fit: BoxFit.fill,),
+              Container(
+                width: 120,
+                height: 120,
+                decoration: BoxDecoration(
+                 shape: BoxShape.circle,
+                  image: DecorationImage(image: AssetImage(image),fit: BoxFit.fill),
+                ),
               ),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

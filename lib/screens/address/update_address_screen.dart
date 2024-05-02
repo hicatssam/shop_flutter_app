@@ -4,14 +4,14 @@ import 'package:shop_app/models/address.dart';
 import 'package:shop_app/models/tag.dart';
 import 'package:shop_app/widget/app_textFiled.dart';
 
-class AddAddressScreen extends StatefulWidget {
-  const AddAddressScreen({super.key});
+class UpdateAddressScreen extends StatefulWidget {
+  const UpdateAddressScreen({super.key});
 
   @override
-  State<AddAddressScreen> createState() => _AddAddressScreenState();
+  State<UpdateAddressScreen> createState() => _UpdateAddressScreenState();
 }
 
-class _AddAddressScreenState extends State<AddAddressScreen> {
+class _UpdateAddressScreenState extends State<UpdateAddressScreen> {
   int? _SelectedItem;
   bool _isSelected = false;
   List<Address> addresses = <Address>[
@@ -33,7 +33,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     return Scaffold(
       appBar: AppBar(
 
-        title: const Text('Add a new address'),
+        title: const Text('Update address'),
         leading: IconButton(
             onPressed: () {
               //TODO: Back To previous screen

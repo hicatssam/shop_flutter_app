@@ -21,5 +21,7 @@ class ScreenKeys {
   static const String notificationsSettingsScreen = '/NotificationsSettingsScreen';
   static const String addressScreen = '/AddressScreen';
   static const String addAddressScreen = '/AddAddressScreen';
+  static const String updateAddressScreen = '/UpdateAddressScreen';
+  static const String profileScreen = '/ProfileScreen';
 
 }

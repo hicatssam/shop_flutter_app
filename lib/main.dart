@@ -5,6 +5,7 @@ import 'package:shop_app/prefs/SharedPrefsContoller.dart';
 import 'package:shop_app/screen-keys.dart';
 import 'package:shop_app/screens/address/add_address_screen.dart';
 import 'package:shop_app/screens/address/address_screen.dart';
+import 'package:shop_app/screens/address/update_address_screen.dart';
 import 'package:shop_app/screens/appBarActions/cart_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/favoruite_bn_screen.dart';
 import 'package:shop_app/screens/bn_screens/main_bn_screen.dart';
@@ -23,6 +24,7 @@ import 'package:shop_app/screens/bn_screens/settings_bn_screen.dart';
 import 'package:shop_app/screens/scanderyScreens/notifications_settings_screen.dart';
 import 'package:shop_app/screens/onBoardringScreens/onBoardringScreen.dart';
 import 'package:shop_app/screens/auth/resetPassword_screen.dart';
+import 'package:shop_app/screens/scanderyScreens/profile_screen.dart';
 import 'package:shop_app/screens/scanderyScreens/successful_check_out_screen.dart';
 
 
@@ -86,7 +88,9 @@ class MyApp extends StatelessWidget {
         ScreenKeys.settingsBnScreen : (context) => const SettingsBnScreen(),
         ScreenKeys.addressScreen : (context) => const AddressScreen(),
         ScreenKeys.addAddressScreen : (context) => const AddAddressScreen(),
+        ScreenKeys.updateAddressScreen : (context) => const UpdateAddressScreen(),
         ScreenKeys.onBoardringScreen : (context) => const OnBoardringSceren(),
+        ScreenKeys.profileScreen : (context) => const ProfileScreen(),
 
       },
     );

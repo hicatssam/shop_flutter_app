@@ -1,3 +1,4 @@
+import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/screen-keys.dart';
 import 'package:shop_app/widget/app_textFiled.dart';
@@ -75,25 +76,42 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(
                   height: 15,
                 ),
-                AppTextFiled('Full Name', 'Enter Full name', Icons.person, Icons.clear, _textFullNameEditingController,false),
-                const SizedBox(
-                  height: 15,
-                ),
-                AppTextFiled('Birth Day', 'Enter Birth Day', Icons.calendar_month_outlined, Icons.calendar_month, _textBirthDayEditingController,false),
-                const SizedBox(
-                  height: 15,
-                ),
-                AppTextFiled('Country', 'Enter country', null,null, _textCountryEditingController,false),
-                const SizedBox(
-                  height: 15,
-                ),
-                AppTextFiled('Email', 'Enter Email Address', Icons.email, Icons.clear, _textEmailEditingController,false),
-                const SizedBox(
-                  height: 15,
-                ),
-                AppTextFiled('Password', 'Enter Password', Icons.lock, Icons.remove_red_eye, _textPasswordEditingController,true),
-                // AppTextFiled('Reset Password', 'Enter Password', Icons.lock, Icons.remove_red_eye, _textPasswordEditingController),
 
+
+                CSCPicker(
+                  layout: Layout.horizontal,
+                  onCountryChanged: (country){},
+                  onStateChanged: (state){},
+                  onCityChanged: (city){},
+                  dropdownDecoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                    shape: BoxShape.rectangle,
+                  ),
+                  disabledDropdownDecoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(15),
+                    shape: BoxShape.rectangle,
+                  ),
+
+
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+              AppTextFiled(label: 'email', hintText: 'enter email', prefixIcon: Icons.email, textEditingController: _textEmailEditingController, keyboardType: TextInputType.emailAddress, obscureText: false),
+              const SizedBox(
+                  height: 15,
+                ),
+                // AppTextFiled('Reset Password', 'Enter Password', Icons.lock, Icons.remove_red_eye, _textPasswordEditingController),
+                AppTextFiled(label: 'Password',  hintText: 'Enter Password',prefixIcon: Icons.lock,
+                  suffixIcon: Icons.remove_red_eye, textEditingController: _textPasswordEditingController,obscureText: true, keyboardType: TextInputType.text,),
                 const SizedBox(
                   height: 25,
                 ),

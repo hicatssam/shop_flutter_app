@@ -14,49 +14,49 @@ class _FavouriteBnScreenState extends State<FavouriteBnScreen> {
   List<FavouriteListTileCard> listFavorite = [
     FavouriteListTileCard(
         title: 'Evening Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/fashion_1.jpg',
         price: '300',
         ratting: '4.8',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Party Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/fashion_2.jpg',
         price: '450',
         ratting: '4.5',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Short Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/fashion_3.jpg',
         price: '180',
         ratting: '3.8',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Short Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/fashion_4.jpg',
         price: '180',
         ratting: '3.8',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Short Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/men2.jpg',
         price: '180',
         ratting: '3.8',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Short Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/men1.jpg',
         price: '180',
         ratting: '3.8',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Short Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/men5.jpg',
         price: '180',
         ratting: '3.8',
         subTitle: 'Small,Red'),
     FavouriteListTileCard(
         title: 'Short Dress',
-        image: 'images/dress1.jpg',
+        image: 'images/men4.jpg',
         price: '180',
         ratting: '3.8',
         subTitle: 'Small,Red'),
@@ -71,21 +71,26 @@ class _FavouriteBnScreenState extends State<FavouriteBnScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    listFavorite.removeWhere((element) => true);
-                  });
-                },
-                style: ElevatedButton.styleFrom(
-                    elevation: 10, backgroundColor: Colors.pink),
-                child: const Text('Clear All'),
-              ),
-            ],
+
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      listFavorite.removeWhere((element) => true);
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(
+                      elevation: 10, backgroundColor: Colors.red),
+                  child: const Text('Clear All'),
+                ),
+              ],
+            ),
           ),
+
           ListView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
@@ -98,50 +103,5 @@ class _FavouriteBnScreenState extends State<FavouriteBnScreen> {
       ),
     );
   }
-// padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-// children: [
-// Row(
-// mainAxisAlignment: MainAxisAlignment.end,
-// children: [
-// ElevatedButton(
-// onPressed: () {},
-// style: ElevatedButton.styleFrom(
-// backgroundColor: Colors.red,
-// elevation: 10,
-// ),
-// child: const Text('Clear All'),
-// ),
-// ],
-// ),
-// FavouriteListTileCard(
-// title: 'Evening Dress',
-// image: 'images/dress1.jpg',
-// price: '250',
-// ratting: '4.5',
-// subTitle: 'Small,Red'),
-// FavouriteListTileCard(
-// title: 'Evening Dress',
-// image: 'images/dress2.jpg',
-// price: '250',
-// ratting: '4.8',
-// subTitle: 'Small,Red'),
-// FavouriteListTileCard(
-// title: 'Evening Dress',
-// image: 'images/dress1.jpg',
-// price: '250',
-// ratting: '4.8',
-// subTitle: 'Small,Red'),
-// FavouriteListTileCard(
-// title: 'Evening Dress',
-// image: 'images/dress3.jpg',
-// price: '250',
-// ratting: '4.8',
-// subTitle: 'Small,Red'),
-// FavouriteListTileCard(
-// title: 'Evening Dress',
-// image: 'images/dress1.jpg',
-// price: '250',
-// ratting: '4.8',
-// subTitle: 'Small,Red'),
-// ],
+
 }
